@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ximon18/docker-volume-plugins.git"
+    "url": "git+https://github.com/BlueArchive/docker-volume-plugins.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ximon18/docker-volume-plugins/issues"
+    "url": "https://github.com/BlueArchive/docker-volume-plugins/issues"
   },
-  "homepage": "https://github.com/ximon18/docker-volume-plugins#readme"
+  "homepage": "https://github.com/BlueArchive/docker-volume-plugins#readme"
 }

@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
+	mountedvolume "github.com/BlueArchive/docker-volume-plugins/mounted-volume"
 	"log"
 	"os"
 	"strings"
 
 	"github.com/docker/go-plugins-helpers/volume"
-	"github.com/ximon18/docker-volume-plugins/mounted-volume"
 )
 
 type gfsDriver struct {
@@ -67,7 +67,8 @@ func (p *gfsDriver) PostMount(req *volume.MountRequest) {
 // AppendVolumeOptionsByVolumeName appends the command line arguments into the current argument list given the volume name
 func AppendVolumeOptionsByVolumeName(args []string, volumeName string) []string {
 	parts := strings.SplitN(volumeName, "/", 2)
-	ret := append(args, "--volfile-id="+parts[0])
+//	ret := append(args, "--volfile-id="+parts[0])
+	ret := args
 	if len(parts) == 2 {
 		ret = append(ret, "--subdir-mount=/"+parts[1])
 	}
